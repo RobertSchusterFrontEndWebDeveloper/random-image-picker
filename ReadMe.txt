@@ -1,1 +1,1 @@
-This project was a Skillcrush class lesson utilizing connecting to and api and displaying an image reandomly selected from that api.
+This project is a Skillcrush class lesson utilizing connecting to an api, and displaying an image that is randomly selected from that api.
