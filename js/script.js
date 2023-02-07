@@ -10,10 +10,8 @@ const getImage = async function () {
   console.log(images);
 
   // select random image from the repo
-  selectRandomImage(images);
+  selectRandomImage(images);  //error #3
 };
-
-getImage();
 
 // randomly select one of the images in the repo
 const selectRandomImage = function(images) {
@@ -21,11 +19,23 @@ const selectRandomImage = function(images) {
   // console.log(`${randomIndex} is my random number`);
 
   const randomImage = images[randomIndex];
-  console.log(randomImage);
+  console.log("randomImage"); 
+  displayImage(randomImage);
 };
 
 // function to display the random image in the DOM
 const displayImage = function(randomImage) {
-  const author = randomImage.author;
-  console.log(`the author is ${author}`);
+  const author = [randomImage.author];  // error #2
+  const imageAddress = randomImage.url;
+  authorSpan.innerText = (author);
+  img.src = imageAddress;
+  imgDiv.classList.remove("hide");
 }
+
+// event listener for button
+button.addEventListener("click", function() {
+  getImage();
+  console.log("button pushed")
+})
+
+// coded this far and received CORB block by Chrome.
